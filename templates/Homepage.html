@@ -32,21 +32,19 @@
 				<div class="col-md-4">
 					<div class="ot-portfolio-item">
 						<figure class="effect-bubba">
-							<img src="/templates/images/demo/portfolio-1.jpg" alt="img02" class="img-responsive" />
+							<a href="/books／groupList">
+                                <img src="{{ country.c_url_photo }}" alt="img02" class="img-responsive" />
 							<figcaption>
 								<h2>{{ country.c_name }}</h2>
 								<p>Click to see groups</p>
-								<!--a href="groupList.html/{{ country.id }}">View more</a-->
-								<a href="books/groupList/{{ country.id }}">View more</a>
 							</figcaption>
-						</figure>
+                            </a>
+                        </figure>
 					</div>
 				</div>
                 {% endfor %}
 				<!-- end portfolio item -->
+
 			</div>
 		</section>
-		<p id="back-top">
-			<a href="#top"><i class="fa fa-angle-up"></i></a>
-		</p>
-{% endblock %}
+{% endblock content %}
