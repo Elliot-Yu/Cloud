@@ -1,8 +1,10 @@
 from django.conf.urls import include, url
+from django.views.generic import RedirectView
+
 from . import views
 
 urlpatterns = [
-    url(r'^$', views.login, name='login'),
+    url(r'^$', RedirectView.as_view(url='/books/Login/')),
     url(r'^Login/$', views.login, name='login'),
     url(r'^showuser/$', views.show_user),
     url(r'^regist/$', views.regist, name='regist'),

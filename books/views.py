@@ -54,12 +54,12 @@ def login(req):
                 #hour = 0
                 #dt = datetime.datetime.now() + datetime.timedelta(hours=int(hour))
                 # login success, go to /homepage.html
-                response = HttpResponseRedirect('/books/')
+                response = HttpResponseRedirect('/books/homepage/')
                 response.set_cookie("username", username, 3600)
                 return response
 
             else:
-                return HttpResponseRedirect('/Login/')
+                return HttpResponseRedirect('/books/Login/')
     else:
         uf = UserForm()
         return render(req,'Login.html',{'uf':uf})
@@ -124,7 +124,7 @@ def homepage(request):
 
     countries = Country.objects.order_by("-id").all()
 
-    return render('Homepage.html',{'countries': countries})
+    return render(request, 'Homepage.html', {'countries': countries})
 
 
 def grouplist(request):

@@ -91,7 +91,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, './books/templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'mysite/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -103,6 +103,9 @@ TEMPLATES = [
         },
     },
 ]
+TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR, 'mysite/templates'),
+)
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
 

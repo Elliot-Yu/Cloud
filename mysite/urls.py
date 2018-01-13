@@ -8,7 +8,8 @@ from mysite import views
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url('^$', RedirectView.as_view(url='/books')),
     url(r'^books/', include('books.urls')),
+    url('^$', RedirectView.as_view(url='/books')),
+
     #url('^Homepage/$', views.Homepage),
 ]
