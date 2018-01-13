@@ -245,8 +245,7 @@ def create_new_group(request):
 
         return HttpResponseRedirect('/books/groupList')
 
-    return render_to_response('create_new_group.html',{'g_name':g_name,'g_city':g_city,'g_place':g_place,'g_member':g_member,'g_country':g_country,'g_organiser':g_organiser,'g_content':g_content,
-                                                       },context_instance=RequestContext(req))
+    return render_to_response('create_new_group.html',context_instance=RequestContext(request))
 
 
 def delete_group(request):
