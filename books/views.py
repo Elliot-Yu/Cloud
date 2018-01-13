@@ -33,7 +33,7 @@ def regist(req):
             return HttpResponseRedirect('/books/Login/')
     else:
         uf = UserFormRe()
-        return render(req,'regist.html',{'uf':uf})
+        return render(req,'regist.html',{'uf':uf},context_instance=RequestContext(req))
 
 
 # login
@@ -58,7 +58,7 @@ def login(req):
                 return HttpResponseRedirect('/Login/')
     else:
         uf = UserForm()
-        return render(req,'Login.html',{'uf':uf})
+        return render(req,'Login.html',{'uf':uf},context_instance=RequestContext(req))
 
 
 def show_user(request):
@@ -245,7 +245,8 @@ def create_new_group(request):
 
         return HttpResponseRedirect('/books/groupList')
 
-    return render_to_response('create_new_group.html')
+    return render_to_response('create_new_group.html',{'g_name':g_name,'g_city':g_city,'g_place':g_place,'g_member':g_member,'g_country':g_country,'g_organiser':g_organiser,'g_content':g_content,
+                                                       },context_instance=RequestContext(req))
 
 
 def delete_group(request):
