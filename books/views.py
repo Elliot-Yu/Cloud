@@ -98,7 +98,7 @@ def comment_add(request):
 
         return HttpResponseRedirect('/myGroupDetail_member/%s' % group_id)
 
-    return render('myGroupDetail_member.html',)
+    return render_to_response('myGroupDetail_member.html',)
 
 
 # c_a_o
@@ -124,7 +124,7 @@ def homepage(request):
 
     countries = Country.objects.order_by("-id").all()
 
-    return render(request, 'Homepage.html', {'countries': countries})
+    return render_to_response('Homepage.html', {'countries': countries})
 
 
 def grouplist(request):
@@ -136,7 +136,7 @@ def grouplist(request):
 
     groups = Group.objects.order_by("-id").all()
 
-    return render('grouplist.html', {'groups': groups })
+    return render_to_response('grouplist.html', {'groups': groups })
 
 
 def group_detail(request, id):
@@ -151,7 +151,7 @@ def group_detail(request, id):
 
     print(len(members))
 
-    return render('group_detail.html', {'group': group, 'members': members})
+    return render_to_response('group_detail.html', {'group': group, 'members': members})
 
 #
 def my_group(request):
@@ -172,7 +172,7 @@ def my_group(request):
 
         m_groups = Group.objects.filter(id=groupid).order_by("-id").all()
 
-        return render('myGroups.html', {'m_groups': m_groups})
+        return render_to_response('myGroups.html', {'m_groups': m_groups})
 
     else:
 
@@ -190,7 +190,7 @@ def myo_group(request):
 
         o_groups = Group.objects.filter(g_organiser_username=current_user).all()
 
-        return render('myGroups.html', {'o_groups': o_groups})
+        return render_to_response('myGroups.html', {'o_groups': o_groups})
 
 
 
@@ -212,7 +212,7 @@ def group_detail_member(request, id):
     print(len(members))
 
     print(len(comments))
-    return render('group_detail.html', {'m_group': m_group, 'members': members, 'comments':comments})
+    return render_to_response('group_detail.html', {'m_group': m_group, 'members': members, 'comments':comments})
 
 
 def group_detail_organiser(request, id):
@@ -232,7 +232,7 @@ def group_detail_organiser(request, id):
     print(len(members))
     print(len(comments))
 
-    return render('group_detail.html', {'o_group': o_group, 'members': members, 'comments':comments})
+    return render_to_response('group_detail.html', {'o_group': o_group, 'members': members, 'comments':comments})
 
 
 # create a new group ok
@@ -263,7 +263,7 @@ def delete_group(request):
 
         return HttpResponseRedirect('/books/group/delete_group')
 
-    return render('myGroupDetail_organiser.html')
+    return render_to_response('myGroupDetail_organiser.html')
 
 
 def complete_group(request):
@@ -278,7 +278,7 @@ def complete_group(request):
 
         return HttpResponseRedirect('/books/group/complete_group')
 
-    return render('myGroupDetail_organiser.html')
+    return render_to_response('myGroupDetail_organiser.html')
 
 
 def quit_group(request):
@@ -296,7 +296,7 @@ def quit_group(request):
 
         return HttpResponseRedirect('/books/group/quit_group')
 
-    return render('myGroupDetail_member.html')
+    return render_to_response('myGroupDetail_member.html')
 
 
 def group_addme(request):
@@ -315,6 +315,6 @@ def group_addme(request):
 
         return HttpResponseRedirect('/books/group/addme')
 
-    return render('group_detail.html')
+    return render_to_response('group_detail.html')
 
 
