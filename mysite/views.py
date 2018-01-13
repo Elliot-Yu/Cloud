@@ -9,5 +9,5 @@ def Homepage(request):
 #def grouplist(req):
    # return render_to_response('groupList.html',{})
 
-def regist(request):
-    return render(request, 'regist.html')
+def Login(request):
+    return render(request, 'Login.html')

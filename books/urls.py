@@ -2,9 +2,9 @@ from django.conf.urls import include, url
 from . import views
 
 urlpatterns = [
-    url(r'^$', views.homepage, name='Homepage'),
+    url(r'^$', views.login, name='login'),
     url(r'^Login/$', views.login, name='login'),
-    url(r'^showuser/$', views.show_user,name = 'show_user'),
+    url(r'^showuser/$', views.show_user),
     url(r'^regist/$', views.regist, name='regist'),
     #url(r'^index/$', views.index, name='index'),
     url(r'^logout/$', views.logout, name='logout'),
@@ -15,10 +15,10 @@ urlpatterns = [
     url(r'^group/delete_group/$', views.delete_group, name='delete_group'),
     url(r'^group/complete_group/$', views.complete_group, name='complete_group'),
     url(r'^group_detail/(?P<id>[\d]+)$', views.group_detail,name = 'group_detail'),
-    url(r'^groupList/$', views.grouplist,name ='groupList'),
+    url(r'^groupList/$', views.grouplist,name ='grouplist'),
     url(r'^comment/addo/$', views.comment_add_o,name ='comment_add_o'),
     url(r'^comment/add/$', views.comment_add,name ='comment_add'),
-   # url(r'^my_group/(?P<username>[\w]+)$', views.my_group,name = 'my_group'),
+    #url(r'^my_group/(?P<username>[\w]+)$'),
     url(r'^my_group/$', views.my_group,name = 'my_group'),
     url(r'^myGroupDetail_organiser/(?P<id>[\w]+)$', views.group_detail_organiser,name='group_detail_organiser'),
     url(r'^myGroupDetail_member/(?P<id>[\w]+)$', views.group_detail_member,name='group_detail_member'),

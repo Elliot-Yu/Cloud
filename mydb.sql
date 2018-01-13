@@ -194,11 +194,9 @@ DROP TABLE IF EXISTS `books_city`;
 CREATE TABLE `books_city` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `ct_name` varchar(30) NOT NULL,
-  `ct_country_id` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `books_city_ct_country_id_bab98c3e_fk_books_country_id` (`ct_country_id`),
-  CONSTRAINT `books_city_ct_country_id_bab98c3e_fk_books_country_id` FOREIGN KEY (`ct_country_id`) REFERENCES `books_country` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `ct_country` varchar(30) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -207,6 +205,7 @@ CREATE TABLE `books_city` (
 
 LOCK TABLES `books_city` WRITE;
 /*!40000 ALTER TABLE `books_city` DISABLE KEYS */;
+INSERT INTO `books_city` VALUES (1,'Belfast','UK'),(2,'Rekjavik','Iceland'),(3,'Paris','France'),(4,'Vatican','Vatican'),(5,'Pisa','Italy');
 /*!40000 ALTER TABLE `books_city` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -220,14 +219,12 @@ DROP TABLE IF EXISTS `books_comment`;
 CREATE TABLE `books_comment` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `detail` longtext NOT NULL,
+  `user` varchar(30) DEFAULT NULL,
   `created_time` datetime(6) DEFAULT NULL,
   `group_id` int(11) NOT NULL,
-  `user_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `books_comment_group_id_8c82b432_fk_books_group_id` (`group_id`),
-  KEY `books_comment_user_id_72935702_fk_books_user_id` (`user_id`),
-  CONSTRAINT `books_comment_group_id_8c82b432_fk_books_group_id` FOREIGN KEY (`group_id`) REFERENCES `books_group` (`id`),
-  CONSTRAINT `books_comment_user_id_72935702_fk_books_user_id` FOREIGN KEY (`user_id`) REFERENCES `books_user` (`id`)
+  CONSTRAINT `books_comment_group_id_8c82b432_fk_books_group_id` FOREIGN KEY (`group_id`) REFERENCES `books_group` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -252,7 +249,7 @@ CREATE TABLE `books_country` (
   `c_name` varchar(30) NOT NULL,
   `c_url_photo` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -261,6 +258,7 @@ CREATE TABLE `books_country` (
 
 LOCK TABLES `books_country` WRITE;
 /*!40000 ALTER TABLE `books_country` DISABLE KEYS */;
+INSERT INTO `books_country` VALUES (1,'UK','/mysite/templates/images/demo/NI_1_Li.jpg'),(2,'Iceland','/mysite/templates/images/demo/Iceland_3_Li.jpg'),(3,'France','/mysite/templates/images/demo/author-6.jpg'),(4,'Vatican','/mysite/templates/images/demo/Vatican_1_Li.jpg'),(5,'Italy','/mysite/templates/images/demo/Italy_2_Li.jpg');
 /*!40000 ALTER TABLE `books_country` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -274,22 +272,16 @@ DROP TABLE IF EXISTS `books_group`;
 CREATE TABLE `books_group` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `g_name` varchar(30) NOT NULL,
+  `g_organiser` varchar(30) NOT NULL,
   `g_member` int(11) NOT NULL,
   `g_place` varchar(30) NOT NULL,
+  `g_city` varchar(30) NOT NULL,
   `g_content` longtext,
   `g_state` varchar(1) NOT NULL,
+  `g_country` varchar(30) NOT NULL,
   `g_createdtime` datetime(6) DEFAULT NULL,
-  `g_city_id` int(11) NOT NULL,
-  `g_country_id` int(11) NOT NULL,
-  `g_organiser_id` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `books_group_g_city_id_0e6fe2c8_fk_books_city_id` (`g_city_id`),
-  KEY `books_group_g_country_id_da697fd9_fk_books_country_id` (`g_country_id`),
-  KEY `books_group_g_organiser_id_e459619f_fk_books_user_id` (`g_organiser_id`),
-  CONSTRAINT `books_group_g_city_id_0e6fe2c8_fk_books_city_id` FOREIGN KEY (`g_city_id`) REFERENCES `books_city` (`id`),
-  CONSTRAINT `books_group_g_country_id_da697fd9_fk_books_country_id` FOREIGN KEY (`g_country_id`) REFERENCES `books_country` (`id`),
-  CONSTRAINT `books_group_g_organiser_id_e459619f_fk_books_user_id` FOREIGN KEY (`g_organiser_id`) REFERENCES `books_user` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -298,6 +290,7 @@ CREATE TABLE `books_group` (
 
 LOCK TABLES `books_group` WRITE;
 /*!40000 ALTER TABLE `books_group` DISABLE KEYS */;
+INSERT INTO `books_group` VALUES (1,'test','1',2,'1','1','1','1','1','2018-01-08 00:00:00.000000'),(2,'test2','1',2,'2','2','2','2','2','2018-01-08 00:00:00.000000');
 /*!40000 ALTER TABLE `books_group` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -310,11 +303,12 @@ DROP TABLE IF EXISTS `books_groupmember`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `books_groupmember` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `member` varchar(30) DEFAULT NULL,
   `group_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `books_groupmember_group_id_92549f35_fk_books_group_id` (`group_id`),
   CONSTRAINT `books_groupmember_group_id_92549f35_fk_books_group_id` FOREIGN KEY (`group_id`) REFERENCES `books_group` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -323,35 +317,8 @@ CREATE TABLE `books_groupmember` (
 
 LOCK TABLES `books_groupmember` WRITE;
 /*!40000 ALTER TABLE `books_groupmember` DISABLE KEYS */;
+INSERT INTO `books_groupmember` VALUES (1,'2',1);
 /*!40000 ALTER TABLE `books_groupmember` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `books_groupmember_member`
---
-
-DROP TABLE IF EXISTS `books_groupmember_member`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `books_groupmember_member` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `groupmember_id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `books_groupmember_member_groupmember_id_user_id_6cfd2e4d_uniq` (`groupmember_id`,`user_id`),
-  KEY `books_groupmember_member_user_id_6e692baf_fk_books_user_id` (`user_id`),
-  CONSTRAINT `books_groupmember_me_groupmember_id_6f9c0d57_fk_books_gro` FOREIGN KEY (`groupmember_id`) REFERENCES `books_groupmember` (`id`),
-  CONSTRAINT `books_groupmember_member_user_id_6e692baf_fk_books_user_id` FOREIGN KEY (`user_id`) REFERENCES `books_user` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `books_groupmember_member`
---
-
-LOCK TABLES `books_groupmember_member` WRITE;
-/*!40000 ALTER TABLE `books_groupmember_member` DISABLE KEYS */;
-/*!40000 ALTER TABLE `books_groupmember_member` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -369,7 +336,7 @@ CREATE TABLE `books_user` (
   `firstname` varchar(30) NOT NULL,
   `lastname` varchar(30) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -378,7 +345,7 @@ CREATE TABLE `books_user` (
 
 LOCK TABLES `books_user` WRITE;
 /*!40000 ALTER TABLE `books_user` DISABLE KEYS */;
-INSERT INTO `books_user` VALUES (1,'Jiachen1018@outlook.com','home','411081387','Jiachen','Li');
+INSERT INTO `books_user` VALUES (1,'Jiachen1018@outlook.com','1','411081387','Jiachen','Li'),(2,'jl4g17@soton.ac.uk','home','411081387','J','L');
 /*!40000 ALTER TABLE `books_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -463,7 +430,7 @@ CREATE TABLE `django_migrations` (
 
 LOCK TABLES `django_migrations` WRITE;
 /*!40000 ALTER TABLE `django_migrations` DISABLE KEYS */;
-INSERT INTO `django_migrations` VALUES (1,'contenttypes','0001_initial','2018-01-08 13:34:12.425000'),(2,'auth','0001_initial','2018-01-08 13:34:16.247000'),(3,'admin','0001_initial','2018-01-08 13:34:17.372000'),(4,'admin','0002_logentry_remove_auto_add','2018-01-08 13:34:17.429000'),(5,'contenttypes','0002_remove_content_type_name','2018-01-08 13:34:18.117000'),(6,'auth','0002_alter_permission_name_max_length','2018-01-08 13:34:18.467000'),(7,'auth','0003_alter_user_email_max_length','2018-01-08 13:34:18.831000'),(8,'auth','0004_alter_user_username_opts','2018-01-08 13:34:18.885000'),(9,'auth','0005_alter_user_last_login_null','2018-01-08 13:34:19.238000'),(10,'auth','0006_require_contenttypes_0002','2018-01-08 13:34:19.259000'),(11,'auth','0007_alter_validators_add_error_messages','2018-01-08 13:34:19.343000'),(12,'auth','0008_alter_user_username_max_length','2018-01-08 13:34:19.798000'),(13,'books','0001_initial','2018-01-08 13:34:25.970000'),(14,'sessions','0001_initial','2018-01-08 13:34:26.298000');
+INSERT INTO `django_migrations` VALUES (1,'contenttypes','0001_initial','2018-01-08 15:22:04.637000'),(2,'auth','0001_initial','2018-01-08 15:22:08.609000'),(3,'admin','0001_initial','2018-01-08 15:22:09.614000'),(4,'admin','0002_logentry_remove_auto_add','2018-01-08 15:22:09.685000'),(5,'contenttypes','0002_remove_content_type_name','2018-01-08 15:22:10.542000'),(6,'auth','0002_alter_permission_name_max_length','2018-01-08 15:22:10.779000'),(7,'auth','0003_alter_user_email_max_length','2018-01-08 15:22:11.064000'),(8,'auth','0004_alter_user_username_opts','2018-01-08 15:22:11.157000'),(9,'auth','0005_alter_user_last_login_null','2018-01-08 15:22:11.353000'),(10,'auth','0006_require_contenttypes_0002','2018-01-08 15:22:11.361000'),(11,'auth','0007_alter_validators_add_error_messages','2018-01-08 15:22:11.382000'),(12,'auth','0008_alter_user_username_max_length','2018-01-08 15:22:11.718000'),(13,'books','0001_initial','2018-01-08 15:22:13.622000'),(14,'sessions','0001_initial','2018-01-08 15:22:13.975000');
 /*!40000 ALTER TABLE `django_migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -501,4 +468,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-01-08 13:37:39
+-- Dump completed on 2018-01-12 23:14:04

@@ -35,12 +35,7 @@ env_variables:
     CLOUDSQL_CONNECTION_NAME: comp3207-191316:europe-west2:travel
     CLOUDSQL_USER: root
     CLOUDSQL_PASSWORD: 123456
-    SQLALCHEMY_DATABASE_URI: >-
-      mysql+pymysql://root:123456@/mydb?unix_socket=/cloudsql/comp3207-191316:europe-west2:travel
 
-beta_settings:
-    cloud_sql_instances: comp3207-191316:europe-west2:travel
-    
 skip_files:
 - ^(.*/)?#.*#$
 - ^(.*/)?.*~$

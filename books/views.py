@@ -64,9 +64,9 @@ def login(req):
 def show_user(request):
     if "username" in request.COOKIES:
         username = request.COOKIES["username"]
-        return HttpResponseRedirect('/books/my_group/', {'username': username})
+        response = HttpResponse('/books/my_group/', {'username': username})
+        return response
     return HttpResponseRedirect('/books/Login')
-
 
 # logout
 def logout(req):
@@ -74,6 +74,8 @@ def logout(req):
     response.delete_cookie('username')
     return response
 
+def Hom_grouplist(request):
+    return HttpResponseRedirect('/books/groupList')
 
 # add comment member
 def comment_add(request):
@@ -130,7 +132,7 @@ def grouplist(request):
 
     groups = Group.objects.order_by("-id").all()
 
-    return render_to_response('groupList.html', {'groups': groups })
+    return render_to_response('grouplist.html', {'groups': groups })
 
 
 def group_detail(request, id):
@@ -167,9 +169,11 @@ def my_group(request):
         m_groups = Group.objects.filter(id=groupid).order_by("-id").all()
 
         return render_to_response('myGroups.html', {'m_groups': m_groups})
+
     else:
-        # login page
-        return HttpResponseRedirect('/books/my_group')
+
+         return HttpResponseRedirect('books/grouplist')
+
 
 
 #

@@ -34,7 +34,7 @@ SECRET_KEY = '=^id0uo2kuvkv@$8z*k*3ci1fm2zidvmyhg#p%2ki!82lmi9=y'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['comp3207-191316.appspot.com']
+ALLOWED_HOSTS = ['comp3207-191316.appspot.com','127.0.0.1','localhost']
 #ALLOWED_HOSTS = [u'localhost']
 
 # cache settings
@@ -52,7 +52,7 @@ CACHES = {
 
 INSTALLED_APPS = (
     'mysite',
-    'books',
+    #'books',
     #'templates',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -60,7 +60,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #'books.books.AppConfig',
+    'books.apps.MyAppConfig',
     #'bootstrap3',
 )
 
@@ -80,8 +80,8 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.security.SecurityMiddleware',
+   #'django.middleware.clickjacking.XFrameOptionsMiddleware',
+   # 'django.middleware.security.SecurityMiddleware',
     #'zqxt.middleware.BlockedIpMiddleware',
     #'books.middleware.ShowSqlMiddleware',
 )
@@ -91,7 +91,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, './books/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -110,35 +110,16 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
-if os.getenv('SERVER_SOFTWARE', '').startswith('Google App Engine'):
-    # Running on production App Engine, so connect to Google Cloud SQL using
-    # the unix socket at /cloudsql/<your-cloudsql-connection string>
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'HOST': '/cloudsql/comp3207-191316:europe-west2:travel',
-            'NAME': 'mydb',
-            'USER': 'root',
-            'PASSWORD': '123456',
-        }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mydb',
+        'USER':'root',
+        'PASSWORD':'123456',
+        'HOST':'127.0.0.1',
+        'PORT':'3306',
     }
-else:
-    # Running locally so connect to either a local MySQL instance or connect to
-    # Cloud SQL via the proxy. To start the proxy via command line:
-    #
-    #     $ cloud_sql_proxy -instances=[INSTANCE_CONNECTION_NAME]=tcp:3306
-    #
-    # See https://cloud.google.com/sql/docs/mysql-connect-proxy
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'HOST': '127.0.0.1',
-            'PORT': '3306',
-            'NAME': 'mydb',
-            'USER': 'root',
-            'PASSWORD': '123456',
-        }
-    }
+}
 
 
 # Internationalization
