@@ -1,9 +1,9 @@
 #coding=utf-8
 from django.shortcuts import render,render_to_response
 from django.http import HttpResponse,HttpResponseRedirect
-from django.template import RequestContext,context_processors.csrf
+from django.template import RequestContext
 from django import forms
-from models import User,Country,City,Group,Comment,GroupMember
+from .models import User,Country,City,Group,Comment,GroupMember
 import datetime
 
 
@@ -149,7 +149,7 @@ def group_detail(request, id):
 
     members = User.objects.filter(id=mid)
 
-    print len(members)
+    print(len(members))
 
     return render('group_detail.html', {'group': group, 'members': members})
 
@@ -209,9 +209,9 @@ def group_detail_member(request, id):
 
     comments = Comment.objects.filter(group=id).order_by("-id").all()
 
-    print len(members)
+    print(len(members))
 
-    print len(comments)
+    print(len(comments))
     return render('group_detail.html', {'m_group': m_group, 'members': members, 'comments':comments})
 
 
@@ -229,8 +229,8 @@ def group_detail_organiser(request, id):
 
     comments = Comment.objects.filter(group=id).order_by("-id").all()
 
-    print len(members)
-    print len(comments)
+    print(len(members))
+    print(len(comments))
 
     return render('group_detail.html', {'o_group': o_group, 'members': members, 'comments':comments})
 
