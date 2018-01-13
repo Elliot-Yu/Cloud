@@ -2,78 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3a41a16-fc42-4149-b152-e8e29bde2274" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/templates/404.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/templates/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/templates/实验.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/mysite/templates/fonts/glyphicons-halflings-regular.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/mysite/templates/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/mysite/templates/fonts/glyphicons-halflings-regular.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/mysite/templates/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/images/demo/16261514992269_.pic_hd.jpg" afterPath="$PROJECT_DIR$/mysite/templates/images/demo/16261514992269_.pic_hd.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/images/demo/16271514992270_.pic_hd.jpg" afterPath="$PROJECT_DIR$/mysite/templates/images/demo/16271514992270_.pic_hd.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/images/demo/Iceland_1_Li.jpg" afterPath="$PROJECT_DIR$/mysite/templates/images/demo/Iceland_1_Li.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/images/demo/Iceland_2_Li.jpg" afterPath="$PROJECT_DIR$/mysite/templates/images/demo/Iceland_2_Li.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/images/demo/Iceland_3_Li.jpg" afterPath="$PROJECT_DIR$/mysite/templates/images/demo/Iceland_3_Li.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/images/demo/Italy_1_Li.jpg" afterPath="$PROJECT_DIR$/mysite/templates/images/demo/Italy_1_Li.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/images/demo/Italy_2_Li.jpg" afterPath="$PROJECT_DIR$/mysite/templates/images/demo/Italy_2_Li.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/images/demo/NI_1_Li.jpg" afterPath="$PROJECT_DIR$/mysite/templates/images/demo/NI_1_Li.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/images/demo/Vatican_1_Li.jpg" afterPath="$PROJECT_DIR$/mysite/templates/images/demo/Vatican_1_Li.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/images/demo/author-2.jpg" afterPath="$PROJECT_DIR$/mysite/templates/images/demo/author-2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/images/demo/author-3.jpg" afterPath="$PROJECT_DIR$/mysite/templates/images/demo/author-3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/images/demo/author-4.jpg" afterPath="$PROJECT_DIR$/mysite/templates/images/demo/author-4.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/images/demo/author-6.jpg" afterPath="$PROJECT_DIR$/mysite/templates/images/demo/author-6.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/images/demo/bg-main.jpg" afterPath="$PROJECT_DIR$/mysite/templates/images/demo/bg-main.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/images/demo/bg-main1.jpg" afterPath="$PROJECT_DIR$/mysite/templates/images/demo/bg-main1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/images/demo/bg-main2.jpg" afterPath="$PROJECT_DIR$/mysite/templates/images/demo/bg-main2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/images/demo/bg-main3.jpg" afterPath="$PROJECT_DIR$/mysite/templates/images/demo/bg-main3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/images/demo/office-bg.jpg" afterPath="$PROJECT_DIR$/mysite/templates/images/demo/office-bg.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/images/demo/partners-1.png" afterPath="$PROJECT_DIR$/mysite/templates/images/demo/partners-1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/images/demo/partners-2.png" afterPath="$PROJECT_DIR$/mysite/templates/images/demo/partners-2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/images/demo/partners-3.png" afterPath="$PROJECT_DIR$/mysite/templates/images/demo/partners-3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/images/demo/partners-4.png" afterPath="$PROJECT_DIR$/mysite/templates/images/demo/partners-4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/images/demo/partners-5.png" afterPath="$PROJECT_DIR$/mysite/templates/images/demo/partners-5.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/images/demo/partners-6.png" afterPath="$PROJECT_DIR$/mysite/templates/images/demo/partners-6.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/images/demo/partners-7.png" afterPath="$PROJECT_DIR$/mysite/templates/images/demo/partners-7.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/images/demo/portfolio-1.jpg" afterPath="$PROJECT_DIR$/mysite/templates/images/demo/portfolio-1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/images/demo/portfolio-2.jpg" afterPath="$PROJECT_DIR$/mysite/templates/images/demo/portfolio-2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/images/demo/portfolio-3.jpg" afterPath="$PROJECT_DIR$/mysite/templates/images/demo/portfolio-3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/images/demo/portfolio-4.jpg" afterPath="$PROJECT_DIR$/mysite/templates/images/demo/portfolio-4.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/images/demo/portfolio-5.jpg" afterPath="$PROJECT_DIR$/mysite/templates/images/demo/portfolio-5.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/images/demo/portfolio-6.jpg" afterPath="$PROJECT_DIR$/mysite/templates/images/demo/portfolio-6.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/images/demo/portfolio-7.jpg" afterPath="$PROJECT_DIR$/mysite/templates/images/demo/portfolio-7.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/images/demo/portfolio-8.jpg" afterPath="$PROJECT_DIR$/mysite/templates/images/demo/portfolio-8.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/images/demo/portfolio-9.jpg" afterPath="$PROJECT_DIR$/mysite/templates/images/demo/portfolio-9.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/images/logo.png" afterPath="$PROJECT_DIR$/mysite/templates/images/logo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/images/research.png" afterPath="$PROJECT_DIR$/mysite/templates/images/research.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/Homepage.html" afterPath="$PROJECT_DIR$/mysite/templates/Homepage.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/Login.html" afterPath="$PROJECT_DIR$/mysite/templates/Login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/base.html" afterPath="$PROJECT_DIR$/mysite/templates/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/create_new_group.html" afterPath="$PROJECT_DIR$/mysite/templates/create_new_group.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/css/bootstrap-theme.css" afterPath="$PROJECT_DIR$/mysite/templates/css/bootstrap-theme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/css/bootstrap-theme.css.map" afterPath="$PROJECT_DIR$/mysite/templates/css/bootstrap-theme.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/mysite/templates/css/bootstrap-theme.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/css/bootstrap.css" afterPath="$PROJECT_DIR$/mysite/templates/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/css/bootstrap.css.map" afterPath="$PROJECT_DIR$/mysite/templates/css/bootstrap.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/mysite/templates/css/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/css/owl.carousel.css" afterPath="$PROJECT_DIR$/mysite/templates/css/owl.carousel.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/css/owl.theme.default.min.css" afterPath="$PROJECT_DIR$/mysite/templates/css/owl.theme.default.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/css/style.css" afterPath="$PROJECT_DIR$/mysite/templates/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/mysite/templates/fonts/glyphicons-halflings-regular.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/groupList.html" afterPath="$PROJECT_DIR$/mysite/templates/groupList.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/group_detail.html" afterPath="$PROJECT_DIR$/mysite/templates/group_detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/js/bootstrap.js" afterPath="$PROJECT_DIR$/mysite/templates/js/bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/mysite/templates/js/bootstrap.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/js/cbpAnimatedHeader.js" afterPath="$PROJECT_DIR$/mysite/templates/js/cbpAnimatedHeader.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/js/ie-emulation-modes-warning.js" afterPath="$PROJECT_DIR$/mysite/templates/js/ie-emulation-modes-warning.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/js/ie10-viewport-bug-workaround.js" afterPath="$PROJECT_DIR$/mysite/templates/js/ie10-viewport-bug-workaround.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/js/npm.js" afterPath="$PROJECT_DIR$/mysite/templates/js/npm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/js/owl.carousel.min.js" afterPath="$PROJECT_DIR$/mysite/templates/js/owl.carousel.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/js/theme-scripts.js" afterPath="$PROJECT_DIR$/mysite/templates/js/theme-scripts.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/myGroupDetail_member.html" afterPath="$PROJECT_DIR$/mysite/templates/myGroupDetail_member.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/myGroupDetail_organiser.html" afterPath="$PROJECT_DIR$/mysite/templates/myGroupDetail_organiser.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/templates/myGroups.html" afterPath="$PROJECT_DIR$/mysite/templates/myGroups.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Homepage.html" afterPath="$PROJECT_DIR$/templates/Homepage.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -104,6 +34,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="create_new_group.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mysite/templates/create_new_group.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1331">
+              <caret line="91" column="22" lean-forward="false" selection-start-line="91" selection-start-column="22" selection-end-line="91" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="myGroupDetail_organiser.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mysite/templates/myGroupDetail_organiser.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -117,8 +57,8 @@
       <file leaf-file-name="Login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mysite/templates/Login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-158">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="367">
+              <caret line="35" column="15" lean-forward="true" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -128,17 +68,17 @@
         <entry file="file://$PROJECT_DIR$/books/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-106">
-              <caret line="74" column="19" lean-forward="true" selection-start-line="74" selection-start-column="19" selection-end-line="74" selection-end-column="19" />
+              <caret line="74" column="19" lean-forward="false" selection-start-line="74" selection-start-column="19" selection-end-line="74" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/books/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+            <state relative-caret-position="195">
+              <caret line="13" column="14" lean-forward="false" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -156,6 +96,8 @@
       <list>
         <option value="$PROJECT_DIR$/templates/Homepage.html" />
         <option value="$PROJECT_DIR$/mysite/templates/Homepage.html" />
+        <option value="$PROJECT_DIR$/mysite/templates/create_new_group.html" />
+        <option value="$PROJECT_DIR$/mysite/templates/Login.html" />
       </list>
     </option>
   </component>
@@ -166,7 +108,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="68" />
+    <option name="x" value="6" />
     <option name="y" value="23" />
     <option name="width" value="1209" />
     <option name="height" value="714" />
@@ -284,7 +226,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="68" y="23" width="1209" height="714" extended-state="0" />
+    <frame x="6" y="23" width="1209" height="714" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24979322" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -330,7 +272,7 @@
     <entry file="file://$PROJECT_DIR$/books/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-106">
-          <caret line="74" column="19" lean-forward="true" selection-start-line="74" selection-start-column="19" selection-end-line="74" selection-end-column="19" />
+          <caret line="74" column="19" lean-forward="false" selection-start-line="74" selection-start-column="19" selection-end-line="74" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -343,14 +285,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/templates/Homepage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="35" column="106" lean-forward="false" selection-start-line="35" selection-start-column="106" selection-end-line="35" selection-end-column="106" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mysite/templates/myGroupDetail_organiser.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -359,21 +293,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/templates/Login.html">
+    <entry file="file://$PROJECT_DIR$/books/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-158">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="195">
+          <caret line="13" column="14" lean-forward="false" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/templates/Homepage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="35" column="106" lean-forward="false" selection-start-line="35" selection-start-column="106" selection-end-line="35" selection-end-column="106" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/books/urls.py">
+    <entry file="file://$PROJECT_DIR$/mysite/templates/Login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="367">
+          <caret line="35" column="15" lean-forward="true" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/templates/create_new_group.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1331">
+          <caret line="91" column="22" lean-forward="false" selection-start-line="91" selection-start-column="22" selection-end-line="91" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>

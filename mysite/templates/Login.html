@@ -35,7 +35,7 @@
         <p>Your username and password didn't match. Please try again.</p>
     {% endif %}
 <form method = 'post' enctype="multipart/form-data" >
-    {% csrf_token %}
+    <br/>{% csrf_token %}<br/>
     {{uf.as_p}}
     <input type="submit" value = "ok" />
 </form>
